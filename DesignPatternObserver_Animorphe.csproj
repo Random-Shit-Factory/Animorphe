@@ -1,0 +1,214 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8C7E878D-B7E6-421C-A5FC-41DDB2A9CF97}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DesignPatternObserver_Animorphe</RootNamespace>
+    <AssemblyName>DesignPatternObserver_Animorphe</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>
+    </DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>DesignPatternObserver_Animorphe.Program</StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Animorphe.cs" />
+    <Compile Include="Bibliotheque.cs" />
+    <Compile Include="Corps.cs" />
+    <Compile Include="Fonctions.cs" />
+    <Compile Include="IObservateur.cs" />
+    <Compile Include="ObservateurConcret.cs" />
+    <Compile Include="Pattes.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Sujet.cs" />
+    <Compile Include="SujetConcret.cs" />
+    <Compile Include="Tete.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AlbatrosCorps.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AlbatrosPattes.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AlbatrosTete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CachalotCorps.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CachalotPattes.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CachalotTete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ColibriCorps.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ColibriPattes.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ColibriTete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DromadaireCorps.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DromadairePattes.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DromadaireTete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GirafeCorps.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GirafePattes.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GirafeTete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LamantinCorps.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LamantinPattes.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LamantinTete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MaquereauCorps.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MaquereauPattes.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MaquereauTete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\OtarieCorps.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\OtariePattes.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\OtarieTete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PerroquetCorps.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PerroquetPattes.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PerroquetTete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AxWMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="WMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EléphantCorps.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EléphantPattes.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EléphantTete.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
